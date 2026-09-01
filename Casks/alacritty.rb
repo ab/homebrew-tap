@@ -12,8 +12,6 @@ cask "alacritty" do
     strategy :github_latest
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   depends_on macos: :big_sur
 
   app "Alacritty.app"
