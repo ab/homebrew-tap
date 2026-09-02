@@ -1,18 +1,38 @@
 # Ab Tap
 
-## How do I install these formulae?
+Homebrew formulae and casks maintained by [ab](https://github.com/ab).
 
-`brew install ab/tap/<formula>`
+## Install
 
-Or `brew tap ab/tap` and then `brew install <formula>`.
+```bash
+brew install ab/tap/<formula>
+brew install --cask ab/tap/<cask>
+```
 
-Or, in a `brew bundle` `Brewfile`:
+Or tap the repository first:
+
+```bash
+brew tap ab/tap
+```
+
+In a `Brewfile`:
 
 ```ruby
 tap "ab/tap"
 brew "<formula>"
+cask "<cask>"
 ```
 
-## Documentation
+## Available Casks
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+### Alacritty
+
+Alacritty is not notarized, so macOS may block it the first time you open it
+after installation or an upgrade.
+
+Approve it in **System Settings > Privacy & Security**, or remove quarantine
+from this application only:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/Alacritty.app
+```
